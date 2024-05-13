@@ -1,0 +1,2 @@
+javac TextGraphAnalyzer.java
+java TextGraphAnalyzer
