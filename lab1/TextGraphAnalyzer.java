@@ -61,7 +61,7 @@ public class TextGraphAnalyzer {
 
     private void loadTextFile() {
         System.out.print("Enter the path to the text file: ");
-        String filePath = "./textfile.txt";
+        String filePath = scanner.next();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -283,7 +283,6 @@ public String generateNewText(String inputText) {
     result.append("\nLength: ").append(path.size() - 1); // Length is number of edges, which is number of vertices - 1
     return result.toString();
 }
-
 
   public String randomWalk() {
     StringBuilder walkResult = new StringBuilder();
