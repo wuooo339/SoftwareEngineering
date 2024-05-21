@@ -249,12 +249,23 @@ public String generateNewText(String inputText) {
     boolean found = false;
     while (!queue.isEmpty()) {
         String current = queue.poll();
-        if (current.equals(endWord)) {
+        Set<String> neighbors = graph.getOrDefault(current.toLowerCase(), new HashMap<>()).keySet();
+        System.out.println(current +" has neighbour");
+        if(neighbors.isEmpty())
+        {
+            System.out.println("is empty");
+            current = queue.poll();
+            continue;
+        }
+        else {
+            for (String neighbor : neighbors) System.out.print(neighbor+" ");
+        }
+        if (current.equals(endWord)||neighbors.isEmpty()) {
             found = true;
             break;
         }
-        Map<String, Integer> neighbors = graph.get(current);
-        for (String neighbor : neighbors.keySet()) {
+
+        for (String neighbor : neighbors) {
             if (!visited.contains(neighbor)) {
                 queue.offer(neighbor);
                 visited.add(neighbor);
