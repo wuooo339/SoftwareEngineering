@@ -250,16 +250,16 @@ public String generateNewText(String inputText) {
     while (!queue.isEmpty()) {
         String current = queue.poll();
         Set<String> neighbors = graph.getOrDefault(current.toLowerCase(), new HashMap<>()).keySet();
-        System.out.println(current +" has neighbour");
+        // System.out.println(current +" has neighbour");
         if(neighbors.isEmpty())
         {
-            System.out.println("is empty");
+            // System.out.println("is empty");
             current = queue.poll();
             continue;
         }
-        else {
-            for (String neighbor : neighbors) System.out.print(neighbor+" ");
-        }
+        // else {
+        //     for (String neighbor : neighbors) System.out.print(neighbor+" ");
+        // }
         if (current.equals(endWord)||neighbors.isEmpty()) {
             found = true;
             break;

@@ -9,7 +9,7 @@
 程序读入文本数据，进行分析，将其转化为有向图：有向图的节点为文本中包含的某个单词，不区分大小写，两个节点A,B之间存在一条边A到B，意味着在文本中至少有一处位置A和B相邻出现（即A和B之间有且仅有1或多个空格），并且A到B的边权重是文本中A和B相邻出现的次数。
 
 ## 要求二
-打印该图
+打印该图，将结果可视化
 
 ## 要求三
 在生成有向图之后，用户输入任意两个英文单词word1、word2，程序从图中查询它们的“桥接词”。word1、word2的桥接词word3：图中存在两条边word1到word3和word3到word2。要求如下：
@@ -30,3 +30,7 @@
 
 ## 要求六
 随机游走。进入该功能时，程序随机的从图中选择一个节点，以此为起点沿出边进行随机遍历，记录经过的所有节点和边，直到出现第一条重复的边为止，或者进入的某个节点不存在出边为止。在遍历过程中，用户也可随时停止遍历。
+
+## 实验验证
+
+    Over the past three decades, Chinese economy is booming. The world is watching China and many foreigners have realized the importance of seeking cooperation, so they want to do business with Chinese people and learning our language works better. Confucius institute provides the place to learn mandarin.As the world is crazy about Chinese, more and more foreigners have interest in our language and culture.
